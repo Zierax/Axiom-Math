@@ -1,4 +1,4 @@
-# AXIOM-MATH v1.0 — Mathematical Verification Guide
+# AXIOM-MATH v1.0: Mathematical Verification Guide
 
 ## Research Framework
 **Central Question:** Does $NP = co-NP$?
@@ -125,3 +125,15 @@ A super-polynomial Frege lower bound would establish $NP \neq co-NP$, but must o
 **Run Metadata:**
 * **Wall Time:** 997.1s (16.6 minutes)
 * **Generated:** 2026-04-21T21:35:05
+
+
+---
+
+## Data Availability and Institutional Access
+
+For the purpose of independent peer review and formal verification, the full execution traces, high-density logic logs, and raw mathematical certificates (22+ comprehensive trace files) are available upon request to verified research institutions and academic departments.
+
+**Access Protocol:**
+1. **Verification:** Requests must be sent from an official institutional email address.
+2. **Confidentiality:** Access is granted subject to a standard Non-Disclosure Agreement (NDA) to protect the proprietary automated reasoning logic of the **Truthimatics Core**.
+3. **Inquiries:** For access requests or verification inquiries, please contact the lead developer. `zs.01117875692@gmail.com`
