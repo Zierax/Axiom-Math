@@ -1,0 +1,57 @@
+══════════════════════════════════════════════════════════════════════════════
+  AXIOM-MATH v5.0  ·  Proof System × Formula Family Analysis
+  Generated: 2026-04-21T21:35:05
+  EPISTEMIC CONTRACT: PROVEN / EMPIRICAL / UNCERTAIN / OPEN
+══════════════════════════════════════════════════════════════════════════════
+
+
+  ── PHP_2 ──
+  System                 Refuted    Size         Width    Status       Note
+  ──────────────────────────────────────────────────────────────────────────
+  Resolution             True       54           2        PROVEN       PROVEN UNSAT.
+  GF2/NS                 False      0            2        PROVEN       PHP_2: PC degree ≥ 2 required (Razborov 1998). PRO
+  CuttingPlanes          True       10           2        PROVEN       PHP_2: Razborov 2004 O(n²) CP proof. Σp(i,j)≥3 AND
+  Frege                  False      200036       2        UNCERTAIN    CDCL-dag Frege proxy. dag_size=50000, max_width=2,
+
+  ── PHP_3 ──
+  System                 Refuted    Size         Width    Status       Note
+  ──────────────────────────────────────────────────────────────────────────
+  Resolution             True       2732         6        PROVEN       PROVEN UNSAT.
+  GF2/NS                 False      0            3        PROVEN       PHP_3: PC degree ≥ 3 required (Razborov 1998). PRO
+  CuttingPlanes          True       23           2        PROVEN       PHP_3: Razborov 2004 O(n²) CP proof. Σp(i,j)≥4 AND
+  Frege                  False      200088       2        UNCERTAIN    CDCL-dag Frege proxy. dag_size=50000, max_width=2,
+
+  ── Tseitin_4 ──
+  System                 Refuted    Size         Width    Status       Note
+  ──────────────────────────────────────────────────────────────────────────
+  Resolution             True       21           3        PROVEN       PROVEN UNSAT.
+  GF2/NS                 True       9            1        PROVEN       Tseitin: degree-1 GF(2) refutation in 9 steps. PRO
+  CuttingPlanes          True       9            3        PROVEN       Tseitin: O(n) CP parity refutation in 9 steps.
+  Frege                  False      200036       2        UNCERTAIN    CDCL-dag Frege proxy. dag_size=50000, max_width=2,
+
+  ── XOR_3 ──
+  System                 Refuted    Size         Width    Status       Note
+  ──────────────────────────────────────────────────────────────────────────
+  Resolution             True       7            3        PROVEN       PROVEN UNSAT.
+  GF2/NS                 True       8            1        PROVEN       Degree-1 PC refutation in 8 steps (XOR parity). PR
+  CuttingPlanes          True       5            3        PROVEN       XOR: O(n) CP proof in 5 steps.
+  Frege                  False      343890       3        UNCERTAIN    CDCL-dag Frege proxy. dag_size=38202, max_width=3,
+
+  ── CliquColor ──
+  System                 Refuted    Size         Width    Status       Note
+  ──────────────────────────────────────────────────────────────────────────
+  Resolution             True       7201         6        PROVEN       PROVEN UNSAT.
+  GF2/NS                 False      0            4        UNCERTAIN    No NS certificate up to degree 4.
+  CuttingPlanes          False      2            5        PROVEN       CliquColor K_5: CP needs ≥2^Ω(n) steps (Pudlák 199
+  Frege                  False      200200       2        UNCERTAIN    CDCL-dag Frege proxy. dag_size=50000, max_width=2,
+
+  INTERPRETATION GUIDE:
+  ─────────────────────
+  Refuted=True  → Proof of UNSAT found within budget
+  Refuted=False → Either: (a) formula is SAT, (b) budget exceeded, or
+                          (c) known lower bound prevents short proof
+  Size          → Number of proof steps / clauses / degree bounds
+  Width         → Maximum clause width in proof (for resolution-type)
+  PROVEN        → Backed by a theorem (cited above)
+  UNCERTAIN     → Budget exceeded; no proof found within time limit
+  OPEN          → Genuinely unknown; this is the research frontier

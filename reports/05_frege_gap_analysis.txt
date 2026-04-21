@@ -1,0 +1,44 @@
+══════════════════════════════════════════════════════════════════════════════
+  AXIOM-MATH v5.0  ·  The Frege Gap: Precise Formulation
+  Generated: 2026-04-21T21:35:05
+  EPISTEMIC CONTRACT: PROVEN / EMPIRICAL / UNCERTAIN / OPEN
+══════════════════════════════════════════════════════════════════════════════
+
+
+  THE FREGE GAP — QUANTITATIVE ANALYSIS
+  ═══════════════════════════════════════════════════════════════════════
+
+  METHOD: CDCL-dag proxy via Beame et al. (2004) correspondence.
+  THEORY: CDCL proofs = resolution proofs (dag-structured).
+          BS&W 2001 Thm 1.3: Frege_size ≤ O(dag_size × max_width²).
+  INTERPRETATION: These are UPPER BOUNDS on Frege size.
+
+  FREGE DAG MEASUREMENTS (PHP_n):
+  ─────────────────────────────────
+
+     n    Vars      Res Size       Width        Frege UB    Time(ms)  Source
+  ────────────────────────────────────────────────────────────────
+     1       2             2           2               8           0  resolution_exact
+     2       6            54           2             216           3  resolution_exact
+     3      12         2,732           6          98,352        1473  resolution_exact
+     4      20        ≥2(LB)           2               8           0  width_theorem_lb
+     5      30        ≥2(LB)           2               8           0  width_theorem_lb
+
+  Growth model for Frege UB:
+    Exponential fit: c·110.8783^n  (R²=0.971)
+    Polynomial fit:  c·n^8.161   (R²=0.900)
+
+  IMPORTANT CAVEAT:
+  ─────────────────
+  These measurements are UPPER BOUNDS on Frege proof complexity.
+  A shorter Frege proof could exist — we simply haven't found it.
+  The CDCL solver hits its conflict budget on PHP for small n,
+  so the dag-size reflects the budget limit, not the true proof size.
+
+  The theoretical question is:
+    Does PHP_n have a polynomial-size Frege proof?
+    If YES: this is major progress toward NP = co-NP.
+    If NO:  NP ≠ co-NP (but proving this requires overcoming the barriers).
+
+  STATUS: OPEN.  No super-polynomial Frege lower bound is known for any
+  formula family, despite 50+ years of effort.

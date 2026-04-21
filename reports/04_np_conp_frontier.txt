@@ -1,0 +1,88 @@
+══════════════════════════════════════════════════════════════════════════════
+  AXIOM-MATH v5.0  ·  NP vs co-NP: The Precise Frontier
+  Generated: 2026-04-21T21:35:05
+  EPISTEMIC CONTRACT: PROVEN / EMPIRICAL / UNCERTAIN / OPEN
+══════════════════════════════════════════════════════════════════════════════
+
+
+  THE NP vs co-NP QUESTION
+  ═════════════════════════════════════════════════════════════════════════
+
+  DEFINITION (Cook-Reckhow 1979):
+    A proof system for TAUT is a poly-time computable surjection P: {0,1}* → TAUT.
+    P is polynomially bounded iff every tautology τ has a proof π with |π| ≤ poly(|τ|).
+
+  THEOREM (Cook-Reckhow 1979):
+    NP = co-NP  ⟺  ∃ polynomially bounded proof system.
+    STATUS: PROVEN (the equivalence, not the resolution).
+
+  WHAT THIS MEANS:
+    To prove NP = co-NP: exhibit a proof system P + show every tautology
+    has a poly-size P-proof.  Candidate: Frege.  Problem: no one has proved it.
+
+    To prove NP ≠ co-NP: for EVERY proof system P, exhibit a tautology family
+    {τ_n} requiring super-polynomial P-proofs.  This requires proving
+    Frege lower bounds — currently unknown and blocked by barriers.
+
+  THE HIERARCHY OF PROOF SYSTEMS (by strength):
+
+    Resolution
+      ↓ SEPARATION: PHP, Tseitin, XOR — all proven exponential [Haken85, BSW01, Beame92]
+    Nullstellensatz / Polynomial Calculus (GF2)
+      ↓ SEPARATION: PHP — degree ≥ n (Razborov 1998); XOR — degree 1 for NS
+    AC0-Frege (constant-depth Frege)
+      ↓ SEPARATION: PHP — exponential (Krajíček 1994)
+    Cutting Planes
+      ↓ SEPARATION: Clique-coloring — exponential (Pudlák 1997)
+      ↓ NOTE: CP is POLYNOMIAL for PHP (Razborov 2004) — a genuine strength
+    ─────────────────────────────────────────────────────
+    ████ THE FREGE GAP ████  ← NO super-polynomial LB known
+    ─────────────────────────────────────────────────────
+    Frege (standard propositional proof system)
+    Extended Frege
+    ...
+
+  THE FREGE GAP (STATED WITH MAXIMUM PRECISION):
+
+    We know (PROVEN, Haken 1985):
+      ∀n: any resolution refutation of PHP_n has length ≥ 2^{n/20}
+
+    We do NOT know (OPEN since Cook 1975):
+      ∃ polynomial p: ∀n: ∃ Frege proof of PHP_n with length ≤ p(n)?
+
+    If YES  → NP = co-NP  (extraordinary result)
+    If NO   → NP ≠ co-NP  (expected but unproven)
+
+    The gap between these outcomes IS the NP vs co-NP question,
+    reduced to a single precisely stated question about the Frege system.
+
+  THE THREE BARRIERS TO RESOLVING THE FREGE GAP:
+
+    1. Relativization (Baker-Gill-Solovay 1975):
+       Any proof technique that treats TMs as black-box oracle machines
+       cannot resolve P vs NP or NP vs co-NP.
+       Resolution, diagonalization: ALL relativize.
+       A proof of NP≠co-NP via Frege lower bounds MUST be non-relativizing.
+
+    2. Natural Proofs (Razborov-Rudich 1997):
+       If secure PRGs exist: no "natural" circuit lower bound technique works.
+       Natural = poly-time checkable + holds for ≥ 2^{-n^ε} fraction of functions.
+       Most known techniques for proving lower bounds are "natural."
+       A Frege lower bound MUST use non-natural methods.
+
+    3. Algebrization (Aaronson-Wigderson 2009):
+       Relativization + standard algebraic techniques cannot resolve NP vs co-NP.
+       IP=PSPACE-style proofs use algebrization (works for containments, not separations).
+       A Frege lower bound MUST be non-algebrizing.
+
+    ALL THREE BARRIERS are PROVEN theorems (not conjectures).
+    Any valid proof must simultaneously bypass all three.
+    No currently known technique does this.
+
+  WHAT A PROOF OF NP ≠ co-NP WOULD REQUIRE:
+    Show: ∃ tautology family {τ_n} s.t. every Frege proof of τ_n has size ≥ 2^{n^ε}
+    Method: Must be non-relativizing, non-natural, non-algebrizing
+    Current best: AC0-Frege exponential lower bounds (Krajíček 1994)
+    Gap: AC0-Frege → Frege = exactly the open frontier
+    Progress: GCT (Mulmuley-Sohoni 2001) avoids both Natural Proofs and Algebrization
+              but has produced no Frege lower bounds yet.

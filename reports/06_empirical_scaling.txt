@@ -1,0 +1,42 @@
+══════════════════════════════════════════════════════════════════════════════
+  AXIOM-MATH v5.0  ·  Empirical Scaling Results
+  Generated: 2026-04-21T21:35:05
+  EPISTEMIC CONTRACT: PROVEN / EMPIRICAL / UNCERTAIN / OPEN
+══════════════════════════════════════════════════════════════════════════════
+
+
+  EMPIRICAL COMPLEXITY SCALING  [STATUS: EMPIRICAL]
+  ═══════════════════════════════════════════════════════════════════════
+
+  WARNING: Empirical curve fitting CANNOT formally prove complexity class.
+  Only a formal mathematical proof can do that (ETH / P≠NP are open).
+
+  ── CDCL RUNTIME AT PHASE TRANSITION (α=4.267) ──────────────────────
+
+     n       avg(ms)    median(ms)
+  ────────────────────────────────────
+     5      13148.26      15017.55
+     8      15013.61      15013.01
+    10      15032.33      15020.13
+    12      15032.13      15022.16
+    15      15019.85      15012.95
+    20      15022.75      15018.97
+    25      15011.81      15010.95
+
+  Best models:
+    Exponential: base=1.003868  (R²=0.2877)
+    Power law:   k=0.0641    (R²=0.4903)
+  
+  Note: flat plateau = time-limit saturation (15s budget).
+  Formal bound requires ETH (Impagliazzo & Paturi 1999): OPEN.
+
+  ── WIDTH THEOREM RESULTS ─────────────────────────────────────────────
+
+  Formula                     w₀    W(φ⊢⊥)               Size LB  Status
+  ────────────────────────────────────────────────────────────────────────
+  PHP_3                        2        10  ≥ 2^{10²/24} ≈ 1.80e+01  EMPIRICAL
+  Tseitin_V5                   1         2  ≥ 2^{2²/14} ≈ 1.22e+00  PROVEN
+  XOR_4                        4         0  ≥ 2^{0²/8} ≈ 1.00e+00  EMPIRICAL
+
+  BS&W 2001: size(π) ≥ 2^{W(φ⊢⊥)²/(2n)}.
+  For PHP_n: W = n/2, giving size ≥ 2^{n/8} — consistent with Haken 1985.
